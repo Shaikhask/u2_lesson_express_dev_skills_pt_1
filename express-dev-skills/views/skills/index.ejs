@@ -7,9 +7,16 @@
     <body>
         <h1>Express Skills</h1>
         <ul>
+            <a href="/skills/new">Add Skill</a>
         <% skills.forEach( skill => { %>
-              <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
-        <% }); %>
+            <li>
+            <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+            <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+                <button type="submit">X</button>
+            </form>
+            <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+            <% }); %>
+        </li>
         </ul>
     </body>
-  <html>
+<html>
