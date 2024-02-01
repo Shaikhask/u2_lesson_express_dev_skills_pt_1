@@ -28,7 +28,7 @@ const deleteOne = (id) => {
   skills.splice(index, 1)
 }
 
-const updateOne = (id, updatedskill) => {
+const updateOne = (id, updatedSkill) => {
   const skillToUpdate = skills.find((skill) => skill.id === parseInt(id))
   skillToUpdate.skill = updatedSkill
 }

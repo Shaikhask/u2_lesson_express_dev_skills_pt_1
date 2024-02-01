@@ -35,8 +35,8 @@ const editSkill = (req, res) => {
 const update = (req, res) => {
   skillId = req.params.id
   updateSkill = req.body.skill
-  Todo.updateOne(skillId, updatedskill)
-  res.redirect("/skill")
+  Skill.updateOne(skillId, updateSkill)
+  res.redirect("/skills")
 }
 
 module.exports = {
